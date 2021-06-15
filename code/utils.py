@@ -1,20 +1,10 @@
-from __future__ import print_function
-
-import os
-import pickle as pkl
-import sys
-
 import networkx as nx
-from networkx.algorithms.community.quality import modularity
 import numpy as np
-import scipy.sparse as sp
-import math
 import warnings
-
 import h5py
 from keras import Model
 import random
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 
 def load_optimizer_weights(model: Model, model_save_path: str):
@@ -93,9 +83,9 @@ def expand_arrays(Y):
     return np.array(Y_2)
 
 
-def plot_graph(G, labels):
-    nx.draw_networkx_nodes(G, pos=nx.spring_layout(G), color=labels)
-    plt.show()
+# def plot_graph(G, labels):
+#     nx.draw_networkx_nodes(G, pos=nx.spring_layout(G), color=labels)
+#     plt.show()
 
 
 def load_data_anomalies(G, anomaly_param):
